@@ -1,0 +1,12 @@
+<h1 class="is-size-1">Baloto</h1>
+
+<div class="container m-5">
+    <!-- <div class="buttons">
+        <button *ngFor="let balota of balotas" class="button is-link">{{balota}}</button>
+      </div> -->
+      <button *ngFor="let balotaGanadora of balotasGanadoras" class="button is-link ml-3  is-size-3">{{balotaGanadora}}</button>
+      <button class="button is-danger is-size-3 ml-3" *ngIf="superBalotaGanadora">{{superBalotaGanadora}}</button>
+      <br>
+    <button class="button is-success m-3 is-size-2" (click)="ganadora()" [disabled]="soloUnaVez">{{message}}</button>
+    <h2 class="is-size-2">{{message2}}</h2>
+</div>
